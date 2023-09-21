@@ -1,0 +1,253 @@
+:root {
+  --clr-primary-hsl-100: ;
+  --clr-primary-hsl-200: ;
+  --clr-primary-hsl-300: ;
+  --clr-primary-hsl-400: ;
+  --clr-primary-hsl-500: ;
+  --clr-primary-hsl-600: ;
+  --clr-primary-hsl-700: ;
+  --clr-primary-hsl-800: ;
+  --clr-primary-hsl-900: ;
+  --clr-primary-hsl-000: ;
+
+  --clr-secondary-hsl-100: ;
+  --clr-secondary-hsl-200: ;
+  --clr-secondary-hsl-300: ;
+  --clr-secondary-hsl-400: ;
+  --clr-secondary-hsl-500: ;
+  --clr-secondary-hsl-600: ;
+  --clr-secondary-hsl-700: ;
+  --clr-secondary-hsl-800: ;
+  --clr-secondary-hsl-900: ;
+  --clr-secondary-hsl-000: ;
+
+  --clr-primary-100: hsl(var(--clr-primary-hsl-100));
+  --clr-primary-200: hsl(var(--clr-primary-hsl-200));
+  --clr-primary-300: hsl(var(--clr-primary-hsl-300));
+  --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+  --clr-primary-500: hsl(var(--clr-primary-hsl-500));
+  --clr-primary-600: hsl(var(--clr-primary-hsl-600));
+  --clr-primary-700: hsl(var(--clr-primary-hsl-700));
+  --clr-primary-800: hsl(var(--clr-primary-hsl-800));
+  --clr-primary-900: hsl(var(--clr-primary-hsl-900));
+  --clr-primary-000: hsl(var(--clr-primary-hsl-000));
+
+  --clr-secondary-100: hsl(var(--clr-secondary-hsl-100));
+  --clr-secondary-200: hsl(var(--clr-secondary-hsl-200));
+  --clr-secondary-300: hsl(var(--clr-secondary-hsl-300));
+  --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
+  --clr-secondary-500: hsl(var(--clr-secondary-hsl-500));
+  --clr-secondary-600: hsl(var(--clr-secondary-hsl-600));
+  --clr-secondary-700: hsl(var(--clr-secondary-hsl-700));
+  --clr-secondary-800: hsl(var(--clr-secondary-hsl-800));
+  --clr-secondary-900: hsl(var(--clr-secondary-hsl-900));
+  --clr-secondary-000: hsl(var(--clr-secondary-hsl-000));
+
+  --primary-gradient: linear-gradient(
+    var(--clr-secondary-300),
+    var(--clr-secondary-400)
+  );
+
+  --secondary-gradient: linear-gradient(
+    var(--clr-secondary-300),
+    var(--clr-secondary-400)
+  );
+
+  --clr-accent-1: ;
+  --clr-accent-2: ;
+  --clr-accent-3: ;
+  --clr-accent-4: ;
+  --clr-accent-5: ;
+
+  --ff-primary: ;
+  --ff-secondary: ;
+
+  --fw-regular: ;
+  --fw-medium: ;
+  --fw-bold: ;
+
+  --fs-100: ;
+  --fs-200: ;
+  --fs-300: ;
+  --fs-400: ;
+  --fs-500: ;
+
+  --size-100: ;
+  --size-200: ;
+  --size-300: 1rem;
+  --size-400: ;
+  --size-500: ;
+
+  /* Tokens */
+
+  --clr-bg-body: var();
+  --clr-bg-card: var();
+  --clr-bg-btn: var();
+  --clr-bg-btn-hover: var();
+  --clr-btn: var();
+  --clr-heading-1: var();
+  --clr-heading-2: var();
+
+  --ff-body: var();
+  --ff-heading: var();
+
+  --fw-body: var();
+  --fw-heading-1: var();
+  --fw-heading-2: var();
+  --fw-btn: var();
+
+  --fs-body: var();
+  --fs-heading-1: var();
+  --fs-heading-2: var();
+  --fs-btn: var();
+}
+
+/* Reset Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/* General Styles */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  color: var(--clr-text);
+  background-color: var(--clr-bg-body);
+}
+
+.container {
+  margin-inline: var(--size-300);
+}
+
+.card {
+  background: var(--clr-bg-card);
+  border-radius: var(--size-300);
+  box-shadow: 0.5rem 1rem 5rem hsl(var(--clr-secondary-hsl-300), 0.5);
+}
+
+.heading-1 {
+  color: var(--clr-heading-1);
+  font-size: var(--fs-heading-1);
+  font-family: var(--ff-heading-1);
+  font-weight: var(--fw-heading-1);
+}
+
+.heading-2 {
+  color: var(--clr-heading-2);
+  font-size: var(--fs-heading-2);
+  font-family: var(--ff-heading-2);
+  font-weight: var(--fw-heading-2);
+}
+
+.btn {
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  color: var(--clr-btn);
+  background: var(--clr-bg-btn);
+  cursor: pointer;
+  padding: var(--size-300);
+  border: none;
+  border-radius: 100vw;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--clr-bg-btn-hover);
+}
+
+/* Utilities */
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--size-100);
+}
+
+.flex-group[data-flex-direction="column"] {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.align-center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.spacer-small {
+  margin-top: var(--size-200);
+}
+
+.spacer-medium {
+  margin-top: var(--size-300);
+}
+
+p[data-max-width] {
+  max-width: 30ch;
+}
+
+[data-low-opacity] {
+  opacity: 0.7;
+}
+
+.coderSeth {
+  font-size: var(--size-300);
+  text-align: center;
+  padding-block-end: var(--size-300);
+}
+
+.coderSeth a {
+  --cS-color: 228, 45%, 44%;
+  color: hsl(var(--cS-color));
+}
+
+/* Small screen widths */
+
+@media (max-width: 650px) {
+  .spacer-small {
+    margin-top: var(--size-100);
+  }
+}
+
+/* Big screen widths */
+
+@media (min-width: 650px) {
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 40rem;
+  }
+}
