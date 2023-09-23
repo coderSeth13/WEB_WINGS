@@ -81,6 +81,7 @@
   /* Tokens */
 
   --clr-bg-body: var();
+  --clr-body: var();
   --clr-bg-card: var();
   --clr-bg-btn: var();
   --clr-bg-btn-hover: var();
@@ -137,7 +138,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-body);
   font-weight: var(--fw-body);
-  color: var(--clr-text);
+  color: var(--clr-body);
   background-color: var(--clr-bg-body);
 }
 
@@ -201,11 +202,11 @@ body {
   margin-inline: auto;
 }
 
-.spacer-small {
+.small-spacer {
   margin-top: var(--size-200);
 }
 
-.spacer-medium {
+.medium-spacer {
   margin-top: var(--size-300);
 }
 
@@ -213,14 +214,10 @@ p[data-max-width] {
   max-width: 30ch;
 }
 
-[data-low-opacity] {
-  opacity: 0.7;
-}
-
 .coderSeth {
   font-size: var(--size-300);
   text-align: center;
-  padding-block-end: var(--size-300);
+  padding-block: var(--size-100);
 }
 
 .coderSeth a {
