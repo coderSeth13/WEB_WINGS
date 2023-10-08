@@ -21,6 +21,12 @@
   --clr-secondary-hsl-900: ;
   --clr-secondary-hsl-000: ;
 
+  --clr-accent-hsl-1: ;
+  --clr-accent-hsl-2: ;
+  --clr-accent-hsl-3: ;
+  --clr-accent-hsl-4: ;
+  --clr-accent-hsl-5: ;
+
   --clr-primary-100: hsl(var(--clr-primary-hsl-100));
   --clr-primary-200: hsl(var(--clr-primary-hsl-200));
   --clr-primary-300: hsl(var(--clr-primary-hsl-300));
@@ -43,6 +49,12 @@
   --clr-secondary-900: hsl(var(--clr-secondary-hsl-900));
   --clr-secondary-000: hsl(var(--clr-secondary-hsl-000));
 
+  --clr-accent-1: hsl(var(--clr-accent-hsl-1));
+  --clr-accent-2: hsl(var(--clr-accent-hsl-2));
+  --clr-accent-3: hsl(var(--clr-accent-hsl-3));
+  --clr-accent-4: hsl(var(--clr-accent-hsl-4));
+  --clr-accent-5: hsl(var(--clr-accent-hsl-5));
+
   --primary-gradient: linear-gradient(
     var(--clr-secondary-300),
     var(--clr-secondary-400)
@@ -52,12 +64,6 @@
     var(--clr-secondary-300),
     var(--clr-secondary-400)
   );
-
-  --clr-accent-1: ;
-  --clr-accent-2: ;
-  --clr-accent-3: ;
-  --clr-accent-4: ;
-  --clr-accent-5: ;
 
   --ff-primary: ;
   --ff-secondary: ;
@@ -74,33 +80,9 @@
 
   --size-100: ;
   --size-200: ;
-  --size-300: 1rem;
+  --size-300: ;
   --size-400: ;
   --size-500: ;
-
-  /* Tokens */
-
-  --clr-bg-body: var();
-  --clr-body: var();
-  --clr-bg-card: var();
-  --clr-bg-btn: var();
-  --clr-bg-btn-hover: var();
-  --clr-btn: var();
-  --clr-heading-1: var();
-  --clr-heading-2: var();
-
-  --ff-body: var();
-  --ff-heading: var();
-
-  --fw-body: var();
-  --fw-heading-1: var();
-  --fw-heading-2: var();
-  --fw-btn: var();
-
-  --fs-body: var();
-  --fs-heading-1: var();
-  --fs-heading-2: var();
-  --fs-btn: var();
 }
 
 /* Reset Styles */
@@ -132,57 +114,15 @@ li a {
   text-decoration: none;
 }
 
-/* General Styles */
-
-body {
-  font-family: var(--ff-body);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-body);
-  color: var(--clr-body);
-  background-color: var(--clr-bg-body);
-}
+/* Utilities */
 
 .container {
-  margin-inline: var(--size-300);
-}
+  --max-width: 1110px;
+  --padding: 1rem;
 
-.card {
-  background: var(--clr-bg-card);
-  border-radius: var(--size-300);
-  box-shadow: 0.5rem 1rem 5rem hsl(var(--clr-secondary-hsl-300), 0.5);
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
 }
-
-.heading-1 {
-  color: var(--clr-heading-1);
-  font-size: var(--fs-heading-1);
-  font-family: var(--ff-heading-1);
-  font-weight: var(--fw-heading-1);
-}
-
-.heading-2 {
-  color: var(--clr-heading-2);
-  font-size: var(--fs-heading-2);
-  font-family: var(--ff-heading-2);
-  font-weight: var(--fw-heading-2);
-}
-
-.btn {
-  font-size: var(--fs-btn);
-  font-weight: var(--fw-btn);
-  color: var(--clr-btn);
-  background: var(--clr-bg-btn);
-  cursor: pointer;
-  padding: var(--size-300);
-  border: none;
-  border-radius: 100vw;
-}
-
-.btn:hover,
-.btn:focus .btn:focus-visible {
-  background: var(--clr-bg-btn-hover);
-}
-
-/* Utilities */
 
 .flex {
   display: flex;
@@ -201,17 +141,66 @@ body {
   margin-inline: auto;
 }
 
+/* General Styles */
+
+body {
+  font-family: var();
+  font-size: var();
+  font-weight: var();
+  color: var();
+  background-color: var();
+
+  min-height: 100vh;
+}
+
+.card {
+  background: var();
+  border-radius: var();
+  box-shadow: 0.5rem 1rem 5rem hsl(var(--clr-secondary-hsl-300), 0.5);
+}
+
+.heading-1 {
+  font-family: var();
+  font-weight: var();
+  color: var();
+  font-size: var();
+}
+
+.heading-2 {
+  font-family: var();
+  font-weight: var();
+  color: var();
+  font-size: var();
+}
+
+.btn {
+  font-weight: var();
+  font-size: var();
+  color: var();
+  background: var();
+  padding: var();
+
+  border-radius: 100vw;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:focus-visible {
+  opacity: 0.85;
+  border: none;
+  outline: none;
+}
+
 /* Small screen widths */
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
 }
 
 /* Big screen widths */
 
-@media (min-width: 650px) {
-  body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-  }
+@media (min-width: 800px) {
 }

@@ -1,4 +1,4 @@
-# Coded by coderSeth
+# coded by coderSeth
 
 ### Links
 
